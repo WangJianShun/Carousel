@@ -4,7 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/轮播.html" line="27" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d3166e-94a3-40b7-8d05-9b058bf79ef8" name="默认的" comment="" />
+    <list default="true" id="50d3166e-94a3-40b7-8d05-9b058bf79ef8" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/轮播.js" beforeDir="false" afterPath="$PROJECT_DIR$/轮播.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -38,8 +41,8 @@
       <file leaf-file-name="轮播.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/轮播.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="289">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -54,6 +57,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -75,12 +81,13 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="402" />
     <option name="y" value="68" />
     <option name="width" value="1400" />
     <option name="height" value="955" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -123,12 +130,12 @@
       <workItem from="1524808007812" duration="31000" />
       <workItem from="1524808069858" duration="10550000" />
       <workItem from="1525006223026" duration="6686000" />
-      <workItem from="1525057571193" duration="18923000" />
+      <workItem from="1525057571193" duration="20677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36190000" />
+    <option name="totallyTimeSpent" value="37944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="402" y="68" width="1400" height="955" extended-state="0" />
@@ -140,6 +147,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3299435" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="消息" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="运行" order="7" />
@@ -216,8 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/轮播.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="289">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
