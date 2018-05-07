@@ -1,7 +1,7 @@
 
 初始化()
 
-setInterval(()=>{
+let timer=setInterval(()=>{
   
   makeLeave(getImg(n))
   .one('transitionend', (e) => {
@@ -11,6 +11,21 @@ setInterval(()=>{
   n+=1
 },2500)
 
+document.addEventListener('visibilitychange',function(e){
+  if(document.hidden){
+    window.clearInterval(timer)
+  }else{
+    timer=setInterval(()=>{
+  
+      makeLeave(getImg(n))
+      .one('transitionend', (e) => {
+        makeEnter(e.currentTarget)
+      })
+      makeCurrent(getImg(n+1))
+      n+=1
+    },2500)
+  }
+})
 
 
 
