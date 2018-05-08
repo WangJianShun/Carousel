@@ -1,70 +1,60 @@
+let $buttons = $('.buttonwrapper>button')
+let $slides = $('.images')
+let $images = $slides.children('img')
+let curent = 0
+makeFakeSlides()
+$slides.css({ transform: 'translateX(-600px)' })
+bindEvents()
 
-初始化()
 
-let timer=setInterval(()=>{
-  
-  makeLeave(getImg(n))
-  .one('transitionend', (e) => {
-    makeEnter(e)
-  })
-  makeCurrent(getImg(n+1))
-  n+=1
-},2500)
+function makeFakeSlides() {
+  let $firstCopy = $images.eq(0).clone(true)
+  let $lastCopy = $images.eq($images.length - 1).clone(true)
 
-document.addEventListener('visibilitychange',function(e){
-  if(document.hidden){
-    window.clearInterval(timer)
-  }else{
-    timer=setInterval(()=>{
-  
-      makeLeave(getImg(n))
-      .one('transitionend', (e) => {
-        makeEnter(e.currentTarget)
+  $slides.append($firstCopy)
+  $slides.prepend($lastCopy)
+}
+
+
+function bindEvents(){
+$buttons.eq(0).on('click', function () {
+  if (current == 3) {
+    $slides.css({ transform: 'translateX(-3000px)' })
+      .one('transitionend', function () {
+        $slides.hide()
+          .offset()
+        $slides.css({ transform: 'translateX(-600px)' })
+          .show()
       })
-      makeCurrent(getImg(n+1))
-      n+=1
-    },2500)
+  } else {
+    $slides.css({ transform: 'translateX(-600px)' })
   }
+  current = 0
 })
-
-
-
-
-
-
-
-function 初始化() {
-  n = 1
-  $(`.images>img:nth-child(${n})`).addClass('current')
-      .siblings().addClass('enter')
-}
-
-function x(n) {
-  if (n > 4) {
-      n = n % 4
+$buttons.eq(1).on('click', function () {
+  $slides.css({ transform: 'translateX(-1200px)' })
+  current = 1
+})
+$buttons.eq(2).on('click', function () {
+  $slides.css({ transform: 'translateX(-1800px)' })
+  current = 2
+})
+$buttons.eq(3).on('click', function () {
+  if (current == 0) {
+    $slides.css({ transform: 'translateX(0px)' })
+      .one('transitionend', function () {
+        $slides.hide()
+          .offset()
+        $slides.css({ transform: 'translateX(-2400px)' })
+          .show()
+      })
+  } else {
+    $slides.css({ transform: 'translateX(-2400px)' })
   }
-  if (n === 0) {
-      n = 4
-  }
-  return n
+  current = 3
+})
 }
 
-function getImg(n) {
-  return $(`.images>img:nth-child(${x(n)})`)
-}
 
-function makeLeave(){
-  return $(`.images>img:nth-child(${x(n)})`)
-  .addClass('leave').removeClass('current enter')
-}
 
-function makeEnter(e){
-  return $(e.currentTarget).removeClass('leave current')
-      .addClass('enter')
-}
-
-function makeCurrent(){
-  return $(`.images>img:nth-child(${x(n+1)})`)
-  .addClass('current').removeClass('enter leave')
-}
 
