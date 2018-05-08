@@ -2,8 +2,9 @@ let $buttons = $('.buttonwrapper>button')
 let $slides = $('.images')
 let $images = $slides.children('img')
 let current = 0
-makeFakeSlides()
 $slides.css({ transform: 'translateX(-600px)' })
+makeFakeSlides()
+
 bindEvents()
 $(next).on('click', function () {
   goToSlide(current + 1)
