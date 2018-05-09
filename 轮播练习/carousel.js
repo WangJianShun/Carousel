@@ -15,7 +15,7 @@ $(previous).on('click', function () {
 
 let timer = setInterval(function () {
   goToSlide(current + 1)
-}, 2000)
+}, 3000)
 
 //防止页面切换到后台时乱序
 document.addEventListener('visibilitychange', function (e) {
@@ -24,16 +24,16 @@ document.addEventListener('visibilitychange', function (e) {
   } else {
     timer = setInterval(function () {
       goToSlide(current + 1)
-    }, 2000)
+    }, 3000)
   }
 })
 
-$('.window').on('mouseenter', function () {
-  window.clearInterval(timer)
+$('.container').on('mouseenter', function () {
+  window.clearInterval(timer)//停留在窗口时停止计时器
 }).on('mouseleave', function () {
   timer = setInterval(function () {
     goToSlide(current + 1)
-  }, 2000)
+  }, 3000)
 })
 
 function makeFakeSlides() {
