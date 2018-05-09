@@ -9,7 +9,7 @@ bindEvents()
 
 let timer = setInterval(function () {
   goToSlide(current + 1)
-}, 3000)
+}, 2000)
 
 
 //防止页面切换到后台时乱序
@@ -19,7 +19,7 @@ document.addEventListener('visibilitychange', function (e) {
   } else {
     timer = setInterval(function () {
       goToSlide(current + 1)
-    }, 3000)
+    }, 2000)
   }
 })
 
@@ -28,7 +28,7 @@ $('.window,.menu').on('mouseenter', function () {
 }).on('mouseleave', function () {
   timer = setInterval(function () {
     goToSlide(current + 1)
-  }, 3000)
+  }, 2000)
 })
 
 function makeFakeSlides() {
